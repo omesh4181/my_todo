@@ -1,0 +1,190 @@
+.main-body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 110%);
+  height: auto;
+  /* width: auto; */
+  position: relative;
+}
+
+.main-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="white" opacity="0.1"/><circle cx="80" cy="40" r="1.5" fill="white" opacity="0.08"/><circle cx="40" cy="80" r="1" fill="white" opacity="0.06"/></svg>');
+  background-size: 100px 100px;
+  animation: float 20s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-20px) translateX(10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.todo-list-maindiv {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 405px;
+  height: 584px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  position: relative;
+  z-index: 1;
+}
+
+.todo-list-maindiv h2 {
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 28px;
+  margin: 30px 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.to-do-task-input-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15px;
+  padding: 20px;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  color: white;
+  padding: 12px 18px;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+.form-floating label {
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 18px;
+}
+
+#add-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+#add-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.todo-list-maindiv h6 {
+  /* color: rgba(255, 255, 255, 0.9); */
+  color: black;
+  font-weight: 600;
+  margin: 25px 0 15px 25px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tasks-list {
+  width: 90%;
+  margin: auto;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.tasks-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tasks-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.tasks-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.task {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateX(5px);
+}
+
+.tasks-button {
+  column-gap: 8px;
+  display: flex;
+}
+
+.btn-success {
+  background: rgba(40, 167, 69, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background: rgba(40, 167, 69, 1);
+  transform: scale(1.05);
+}
+
+.btn-danger {
+  background: rgba(220, 53, 69, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-danger:hover {
+  background: rgba(220, 53, 69, 1);
+  transform: scale(1.05);
+}
