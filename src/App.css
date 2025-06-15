@@ -1,6 +1,6 @@
 .main-body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 110%);
-  height: auto;
+  height: 100vh;
   /* width: auto; */
   position: relative;
 }
